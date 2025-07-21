@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AR COOL CARE - AC Repair Services</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f8fc;
+    }
+
+    header {
+      background: linear-gradient(to right, #1e90ff, #00bfff);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 { margin: 0; font-size: 36px; }
+    header p { font-size: 18px; }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .services, .technicians {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .why-choose {
+      background: #ffe6f0;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .why-choose h2 {
+      margin-bottom: 20px;
+    }
+
+    .why-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .why-item {
+      background: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      font-weight: bold;
+    }
+
+    .brands-container {
+      overflow: hidden;
+      background: white;
+      padding: 20px 0;
+    }
+
+    .brands {
+      display: flex;
+      animation: scrollBrands 20s linear infinite;
+    }
+
+    @keyframes scrollBrands {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .brands img {
+      height: 50px;
+      margin: 0 40px;
+    }
+
+    .form-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .form-box input, .form-box select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .technician img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 300px;
+      margin-top: 30px;
+    }
+
+    .sticky-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      text-decoration: none;
+    }
+    .brand-logo {
+  height: 50px;
+  width: auto;
+  margin: 0 20px;
+  animation: scroll 20s linear infinite;
+  object-fit: contain;
+}
+
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+    <!-- HERO SECTION START -->
+<section class="hero" style="position: relative; overflow: hidden; background: linear-gradient(to right, #e0f7fa, #ffffff); padding: 100px 20px; text-align: center;">
+  <!-- Fan animation background -->
+  <div style="position: absolute; top: 20px; left: 20px; width: 80px; height: 80px; background: url('') no-repeat center/contain; animation: spinFan 5s linear infinite;"></div>
+
+  <!-- Big Offer text -->
+  <h1 style="font-size: 36px; font-weight: bold; color: #0a3d62;">Fast & Reliable AC Repair Services in Vijayawada</h1>
+  <p style="font-size: 20px; color: #555; margin: 10px 0;">🔥 Big Discounts on AC Servicing & Gas Filling 🔥</p>
+
+  <!-- Animated buttons -->
+  <div style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <a href="tel:+916301155739" style="animation: slideInLeft 1s ease-out; background-color: #007BFF; color: white; padding: 15px 25px; border-radius: 30px; text-decoration: none; font-size: 18px;">📞 Call Now</a>
+    <a href="https://wa.me/916301155739?text=Hi, I want to book an AC service." target="_blank" style="animation: slideInRight 1s ease-out; background-color: #25D366; color: white; padding: 15px 25px; border-radius: 30px; text-decoration: none; font-size: 18px;">💬 WhatsApp Now</a>
+  </div>
+</section>
+
+<!-- Hero animations -->
+<style>
+@keyframes spinFan {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes slideInLeft {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+  0% { transform: translateX(100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+</style>
+<!-- HERO SECTION END -->
+
+
+  <header>
+    <h1>AR COOL CARE</h1>
+    <p>AC Repair, Gas Filling, Maintenance & More - Sanath Nagar, Vijayawada</p>
+  </header>
+
+  <section class="section" data-aos="fade-up">
+    <h2 style="text-align:center;">Our Services</h2>
+    <div class="services">
+      <div class="card"><img src="https://img.icons8.com/ios/100/air-conditioner.png"/><h3>AC Repair</h3></div>
+      <div class="card"><img src="https://img.icons8.com/ios/100/refill.png"/><h3>Gas Filling</h3></div>
+      <div class="card"><img src="https://img.icons8.com/ios/100/tools.png"/><h3>General Maintenance</h3></div>
+      <div class="card"><img src="https://img.icons8.com/ios/100/wrench.png"/><h3>AC Installation</h3></div>
+      <div class="card"><img src="https://img.icons8.com/ios/100/clean.png"/><h3>AC Cleaning</h3></div>
+      <div class="card"><img src="https://img.icons8.com/ios/100/inspection.png"/><h3>AC Inspection</h3></div>
+    </div>
+  </section>
+
+  <section class="section why-choose" data-aos="fade-up">
+    <h2>Why Choose Us</h2>
+    <div class="why-box">
+      <div class="why-item">👩‍🔧 Certified Technicians</div>
+      <div class="why-item">⚡ 30-Min Fast Service</div>
+      <div class="why-item">💰 Transparent Pricing</div>
+      <div class="why-item">✅ 1000+ Happy Customers</div>
+    </div>
+  </section>
+
+  <div class="brands-container" data-aos="fade-up">
+    <div class="brands">
+      <img src="https://1000logos.net/wp-content/uploads/2021/04/LG-logo.png" />
+      <img src="https://1000logos.net/wp-content/uploads/2017/03/Voltas-Logo.png" />
+      <img src="https://1000logos.net/wp-content/uploads/2017/06/Samsung-Logo.png" />
+    <img src="c:\Users\Shaik Ismail\Downloads\1609f205-2527-4661-a97b-1d50feabe333.jpeg" class="brand-logo" alt="LG Logo">
+    <img src="c:\Users\Shaik Ismail\Downloads\33aa4d3d-55e8-4c24-b566-8d84f20acabc.png" class="brand-logo" alt="Daikin Logo">
+    <img src="c:\Users\Shaik Ismail\Downloads\pansonic.jpg" class="brand-logo" alt="Panasonic Logo">
+  </div>
+</section>
+    </div>
+  </div>
+
+  <section class="section" data-aos="fade-up">
+    <h2 style="text-align:center;">Book a Service</h2>
+    <div class="form-box">
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="tel" id="phone" placeholder="Phone Number" />
+      <select id="service">
+        <option value="AC Repair">AC Repair</option>
+        <option value="Gas Filling">Gas Filling</option>
+        <option value="Installation">Installation</option>
+      </select>
+      <button onclick="sendWhatsApp()">Book Now on WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2 style="text-align:center;">Our Technicians</h2>
+    <div class="services technicians">
+      <div class="card technician"><img src="c:\Users\Shaik Ismail\Downloads\Screenshot 2025-07-20 181117.jpg"/><h4>Shaik riyaz</h4></div>
+      <div class="card technician"><img src=""/><h4>Naresh Reddy</h4></div>
+      <div class="card technician"><img src=""/><h4>Sai Teja</h4></div>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2 style="text-align:center;">Our Location</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps?q=Sanath+Nagar,+Vijayawada&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </section>
+
+  <a href="https://wa.me/916301155739" class="sticky-btn" target="_blank">📞</a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function sendWhatsApp() {
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const service = document.getElementById("service").value;
+      const msg = `Hi, my name is ${name}, phone: ${phone}. I need ${service} service.`;
+
+      const url = `https://wa.me/+91 6301 155 739?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+  <!-- Footer -->
+<footer style="background-color: #000; color: #fff; padding: 40px 20px 100px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <!-- Contact Info -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h3>Contact Info</h3>
+      <p>📍 Vijayawada, Andhra Pradesh</p>
+      <p>📞 +91 6301 155 739</p>
+      <p>✉️ ARcoolcare12@gmail.com</p>
+      <a href="https://wa.me/+91 6301 155 739" target="_blank">
+        <button style="background: orange; color: #fff; border: none; padding: 10px 25px; margin-top: 10px; cursor: pointer;">Book Service</button>
+      </a>
+    </div>
+
+    <!-- Business Hours -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h3>Business Hours</h3>
+      <p>🕒 Mon - Fri: 8:00am - 7:30pm</p>
+      <p>🕒 Saturday: 8:00am - 1:30pm</p>
+      <p>🕒 Sunday: Closed</p>
+    </div>
+
+    <!-- Information -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h3>Information</h3>
+      <p>➤ AC Repair and Service</p>
+      <p>➤ Washing Machine Service</p>
+      <p>➤ Refrigerator Service Center</p>
+      <p>➤ Microwave Service Center</p>
+    </div>
+
+    <!-- Services -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h3>Services</h3>
+      <p>➤ Split AC, Window AC, Inverter AC</p>
+      <p>➤ Gas Refilling, General Maintenance</p>
+      <p>➤ All AC Brands Supported</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bottom Bar -->
+<div style="position: fixed; bottom: 0; width: 100%; background: #111; color: white; display: flex; align-items: center; justify-content: space-between; padding: 8px 15px; z-index: 1000;">
+  <div style="display: flex; align-items: center;">
+    <a href="tel:+91 6301 155 739" style="background: green; padding: 8px; border-radius: 50%; margin-right: 10px; color: white; text-decoration: none;">📞</a>
+    <span style="font-size: 14px;">Call Now : +91 6301 155 739</span>
+  </div>
+  <div style="font-size: 13px;">© AR Cool Care. All rights reserved.</div>
+  <a href="https://wa.me/+91 6301 155 739" target="_blank" style="background: #25d366; padding: 8px; border-radius: 50%; color: white; text-decoration: none;">📞</a>
+</div>
+
+</body>
+</html>
